@@ -1,0 +1,6 @@
+name: Plugin
+api-version: 1.21
+version: ${version}
+main: 
+load: POSTWORLD
+author: TurboMaxe
