@@ -55,9 +55,9 @@ tasks.build {
 }
 
 tasks.shadowJar {
-    relocate("com.github.puregero.multilib", "io.turbo.random.duckyBounties.multilib")
-    relocate("dev.triumphteam.gui", "io.turbo.random.duckyBounties.gui")
-    relocate("me.lucko.helper", "io.turbo.random.duckyBounties.libs.lucko")
+    relocate("com.github.puregero.multilib", "io.turbo.random.multilib")
+    relocate("dev.triumphteam.gui", "io.turbo.random.gui")
+    relocate("me.lucko.helper", "io.turbo.random.libs.lucko")
     mergeServiceFiles()
 }
 
