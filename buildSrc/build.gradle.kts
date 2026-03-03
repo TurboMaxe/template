@@ -4,8 +4,13 @@ plugins {
     id("xyz.jpenilla.run-paper") version "2.3.1"
 }
 
-group = "io.turbo.random"
-version = "1.0"
+val name = "TurboPlugin"
+val main = "io.turbo.random.Main"
+val ver = "1.0-SNAPSHOT"
+val api = "1.21"
+
+project.name = name
+project.version = ver
 
 repositories {
     mavenCentral()
@@ -64,9 +69,12 @@ tasks.shadowJar {
 tasks.processResources {
     val props = mapOf(
         "version" to project.version,
-        "name" to project.name
+        "name" to project.name,
+        "main" to main,
+        "apiversion" to api 
     )
     inputs.properties(props)
+
     filteringCharset = "UTF-8"
     filesMatching("plugin.yml") {
         expand(props)
