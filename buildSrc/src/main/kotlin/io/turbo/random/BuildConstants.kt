@@ -1,7 +1,5 @@
 package io.turbo.random
 
-import org.jetbrains.kotlin.konan.file.File
-
 object BuildConstants { 
      // change immediately
      val name = "Plugin"
