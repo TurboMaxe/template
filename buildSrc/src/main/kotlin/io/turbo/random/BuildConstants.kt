@@ -12,5 +12,5 @@ object BuildConstants {
      // class where bukkit's java plugin is extended
      val main = "${group}.Main"
      // not-needed boolean, just determmines if the plugin is in snapshot
-     val IS_SNAPSHOT: Boolean = VERSION.contains("SNAPSHOT")
+     val IS_SNAPSHOT: Boolean = ver.contains("SNAPSHOT")
 }
