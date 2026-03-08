@@ -2,11 +2,11 @@ package io.turbo.random
 
 object BuildConstants { 
      
-     val name = ""
+     var name = ""
      val group = "io.turbo.random"
-     val ver = "1.0-b1"
+     var ver = "1.0-b1"
      val api = "1.21"
-     val main = "${group}.Main"
-     // is plugin beta?
+     var main = "${group}.Main"
+     // is plugin in beta ver?
      val IS_BETA: Boolean = ver.contains("b")
 }
