@@ -1,6 +1,9 @@
+import io.turbo.random.BuildConstants
+
 plugins {
     `kotlin-dsl`
 }
+
 
 repositories {
     mavenCentral()
@@ -20,7 +23,21 @@ dependencies {
     testCompileOnly("org.jetbrains:annotations:26.0.2")
     testCompileOnly("org.projectlombok:lombok:1.18.38")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
-
-
+}
+tasks {
+  register("printSystemProperties") {
+    doLast {
+        println("Plugin version: ${BuildConstants.ver}")
+        println("API version: ${BuildConstants.api}")
+      if (BuildConstants.ver.contains("b")) {
+         println("Running in beta version of ${BuildConstants.name}") 
+            }
+         }
+      }
+   withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
+        archiveFileName.set("${rootProject.name}-${project.name.replaceFirstChar{it.uppercase()}}-${BuildConstants.ver}.jar")
+    }
+  
+   }
 }
 
