@@ -1,0 +1,6 @@
+name: Plugin
+version: ${version}
+main: io.papermc.testplugin.ExamplePlugin
+description: A plugin
+author: TurboMaxe
+api-version: ${api}
