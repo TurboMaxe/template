@@ -29,11 +29,26 @@ tasks {
     doLast {
         println("Plugin version: ${BuildConstants.ver}")
         println("API version: ${BuildConstants.api}")
+
       if (BuildConstants.ver.contains("b")) {
          println("Running in beta version of ${BuildConstants.name}") 
             }
          }
       }
+
+  named<ProcessResources>("processResources") {
+        val props = mapOf("version" to BuildConstants.ver,
+                          "api" to BuildConstants.api)
+
+        inputs.properties(props)
+        filteringCharset = "UTF-8"
+
+        filesMatching(listOf("plugin.yml", "paper-plugin.yml")) {
+            expand(props)
+        }
+    }
+
+
    withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
         archiveFileName.set("${rootProject.name}-${project.name.replaceFirstChar{it.uppercase()}}-${BuildConstants.ver}.jar")
     }
