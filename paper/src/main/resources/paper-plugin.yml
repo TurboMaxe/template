@@ -1,0 +1,9 @@
+name: Plugin
+version: ${version}
+main: io.turbo.random.plugin.Plugin
+api-version: ${api}
+author: TurboMaxe
+load: STARTUP
+# loadbefore: []
+# depend: []
+# softdepend: []
