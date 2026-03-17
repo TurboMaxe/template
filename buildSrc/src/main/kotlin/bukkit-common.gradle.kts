@@ -1,29 +1,42 @@
 import io.turbo.random.BuildConstants
 
 plugins {
-    `kotlin-dsl`
+   `kotlin-dsl`
+   java
+   id("io.papermc.paperweight.userdev") version "2.0.0-beta.19"
+   id("xyz.jpenilla.resource-factory-paper-convention") version "1.3.1"
+   id("xyz.jpenilla.run-paper") version "3.0.2"
+   id("com.gradleup.shadow") version "9.2.2"
 }
 
+group = "io.turbo"
+version = "0.0.1"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    paperweight.paperDevBundle("1.21.10-R0.1-SNAPSHOT")
+
     compileOnly("org.projectlombok:lombok:1.18.38")
     annotationProcessor("org.projectlombok:lombok:1.18.38")
 
     compileOnly("org.jetbrains:annotations:26.0.2")
     annotationProcessor("org.jetbrains:annotations:26.0.2")
 
+
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.12.2")
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.12.2")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.12.2")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.12.2")
+    
     testCompileOnly("org.jetbrains:annotations:26.0.2")
+
     testCompileOnly("org.projectlombok:lombok:1.18.38")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
 }
+
 tasks {
   register("printSystemProperties") {
     doLast {
@@ -35,6 +48,17 @@ tasks {
             }
          }
       }
+/** 
+* paperPluginYaml {
+*    main = "$group.${project.name.lowercase()}.${project.name}"
+*    authors.add("JavierFlores09")
+*    apiVersion = "1.21.10"
+*
+*    dependencies {
+*        server("BetterGolems2", Load.AFTER)
+*    }
+* }
+*/ 
 
   named<ProcessResources>("processResources") {
         val props = mapOf("version" to BuildConstants.ver,
