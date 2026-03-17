@@ -51,13 +51,8 @@ tasks {
 /** 
 * paperPluginYaml {
 *    main = "$group.${project.name.lowercase()}.${project.name}"
-*    authors.add("JavierFlores09")
+*    authors.add("TurboMaxe")
 *    apiVersion = "1.21.10"
-*
-*    dependencies {
-*        server("BetterGolems2", Load.AFTER)
-*    }
-* }
 */ 
 
   named<ProcessResources>("processResources") {
