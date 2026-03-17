@@ -14,7 +14,16 @@ version = "0.0.1"
 
 repositories {
     mavenCentral()
+    maven("https://repo.papermc.io/repository/maven-public/")
+    maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
 }
+
+/** 
+* paperPluginYaml {
+*    main = "$group.${project.name.lowercase()}.${project.name}"
+*    authors.add("TurboMaxe")
+*    apiVersion = "1.21.10"
+*/ 
 
 dependencies {
     paperweight.paperDevBundle("1.21.10-R0.1-SNAPSHOT")
@@ -48,12 +57,6 @@ tasks {
             }
          }
       }
-/** 
-* paperPluginYaml {
-*    main = "$group.${project.name.lowercase()}.${project.name}"
-*    authors.add("TurboMaxe")
-*    apiVersion = "1.21.10"
-*/ 
 
   named<ProcessResources>("processResources") {
         val props = mapOf("version" to BuildConstants.ver,
