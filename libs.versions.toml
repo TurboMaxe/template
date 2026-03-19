@@ -1,0 +1,15 @@
+[versions]
+
+sqlite = "7.0.2"
+placeholderapi = "2.11.6"
+luckperms = "5.5"
+vault = "1.7"
+anvilgui = "1.10.9-SNAPSHOT"
+
+[libraries]
+
+sqlite = { module = "org.xerial:sqlite-jdbc", version.ref = "sqlite" }
+anvilgui = { module = "net.wesjd:anvilgui", version.ref = "anvilgui" }
+placeholderapi = { module = "me.clip:placeholderapi", version.ref = "placeholderapi" }
+luckperms = { module = "net.luckperms:api", version.ref = "luckperms" }
+vault = { module = "com.github.MilkBowl:VaultAPI", version.ref = "vault" }
