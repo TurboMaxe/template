@@ -5,11 +5,37 @@ placeholderapi = "2.11.6"
 luckperms = "5.5"
 vault = "1.7"
 anvilgui = "1.10.9-SNAPSHOT"
+swm = "2.2.1"
+protocol-netty = "4.2.1.Final"
+protocollib = "5.4.0"
+common-configlib = "4.5.0"
+log4j = "2.19.0
+kotlin = "2.1.21"
+shadow = "9.0.0-beta12"
+http-async = "3.0.8"
+gson = "2.13.2"
+guava  = "33.5.0-jre"
+lucko = "5.6.14"
+multilib = "1.2.5"
+redisson = "3.52.0"
+cloud = "2.0.0"
 
 [libraries]
 
 sqlite = { module = "org.xerial:sqlite-jdbc", version.ref = "sqlite" }
 anvilgui = { module = "net.wesjd:anvilgui", version.ref = "anvilgui" }
+redisson = { module = "org.redisson:redisson", version.ref = "redisson" }
 placeholderapi = { module = "me.clip:placeholderapi", version.ref = "placeholderapi" }
 luckperms = { module = "net.luckperms:api", version.ref = "luckperms" }
+log4j = { group = "org.apache.logging.log4j", name = "log4j-core", version.ref = "log4j" }
 vault = { module = "com.github.MilkBowl:VaultAPI", version.ref = "vault" }
+configlib = { group = "de.exlll", name = "configlib-yaml", version.ref = "common-configlib" }
+cloud-annotations = { group = "org.incendo", name = "cloud-annotations", version.ref = "cloud" }
+protocol-netty = { group = "io.netty", name = "netty-all", version.ref = "protocol-netty" }
+http-async = { group = "org.asynchttpclient", name = "async-http-client", version.ref = "http-async" }
+google-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+google-guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
+swm = { module = "com.grinderwolf:slimeworldmanager-plugin", version.ref = "swm" }
+protocollib = { module = "net.dmulloy2:ProtocolLib", version.ref = "protocollib" }
+lucko = { module = "me.lucko:helper", version.ref = "lucko" }
+multilib = { module = "com.github.puregero:multilib", version.ref = "multilib"  }
